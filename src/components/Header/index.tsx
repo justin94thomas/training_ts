@@ -6,7 +6,7 @@ const Header: React.FC = () =>{
 const navigate = useNavigate();
     return (<>
         <div className='header-main'>
-            <h4>React + Typescript Training</h4>
+            <h4>React + Typescript and Node Training</h4>
             <button onClick={() => navigate('/')}>Back to Dashboard</button>
         </div>
     </>)
