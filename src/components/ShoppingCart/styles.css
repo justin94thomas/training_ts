@@ -1,0 +1,205 @@
+.App {
+    padding: 8px;
+}
+
+.product-image {
+    height: auto;
+    width: 90px;
+}
+
+.product-div {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-self: left;
+    gap: 10px;
+}
+
+@media screen and (max-width: 256px) {
+    .product-div {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (min-width: 512px) {
+    .product-div {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .product-div {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+.product-item {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    overflow: hidden;
+    align-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.cart-item {
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 17px;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 2.8em;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+.product-pricing {
+    place-items: center;
+}
+
+.shopping-listings {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-self: left;
+    gap: 20px;
+}
+
+/* Drawer animation: */
+.drawer-toggle {
+    position: fixed;
+    top: 60px;
+    right: 0px;
+    z-index: 1100;
+    padding: 10px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Drawer base styles */
+.drawer {
+    position: fixed;
+    top: 61px;
+    right: -400px;
+    width: 400px;
+    height: 100%;
+    background-color: #f9f9f9;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: right 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+/* When drawer is open */
+.drawer.open {
+    right: 0;
+    opacity: 1;
+}
+
+/* Optional: fade-in animation for content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.drawer.open>* {
+    animation: fadeIn 0.4s ease forwards;
+}
+
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.cart-length {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    background: red;
+    padding: 3px 6px;
+    font-size: 8px;
+    border-radius: 40px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+
+.cart-main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.cart-header {
+    position: sticky;
+    top: 0;
+    background-color: #f9f9f9;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 10;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-div {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.cart-div::-webkit-scrollbar {
+    display: none;
+}
+
+.show-payments {
+    position: sticky;
+    bottom: 0;
+    background-color: #f9f9f9;
+    padding: 15px 10px;
+    border-top: 1px solid #ddd;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 180px;
+}
+
+.payment-text {
+    margin: 0px;
+}

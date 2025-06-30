@@ -1,0 +1,98 @@
+.blog-container {
+    padding: 20px;
+}
+
+.blog-content {
+    display: flex;
+    gap: 20px;
+}
+
+.blog-lists-main,
+.create-blog-main {
+    border: 1px solid #777;
+    border-radius: 8px;
+    padding: 8px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.create-blog-main {
+    width: 500px;
+    padding: 8px;
+    height: max-content;
+    padding-bottom: 20px;
+}
+
+.blog-post {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 12px;
+    max-width: 500px;
+}
+
+.comments-sec-main {
+    border: 1px dashed #777;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 8px 0;
+    height: auto;
+}
+
+h5,
+p {
+    margin: 2px;
+}
+
+.show-comments {
+    font-size: 12px;
+    color: rgb(62, 62, 179);
+    margin: 10px 12px;
+    cursor: pointer;
+}
+
+.add-comment {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0;
+}
+
+.add-comment-input {
+    max-width: 100%;
+    width: auto;
+    height: 40px;
+    resize: none;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.comment-btn {
+    width: fit-content;
+}
+
+/* Create New Blog */
+
+.error {
+    font-size: 12px;
+    color: red;
+    font-style: italic;
+}
+
+.form-title,
+.form-desc {
+    width: -webkit-fill-available;
+    max-width: -webkit-fill-available;
+}
+
+.form-desc{
+    height: 50px;
+    min-height: 50px;
+    max-height: 100px;
+}
+.create-blog-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
