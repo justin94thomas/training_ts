@@ -9,6 +9,7 @@ const ToDo = lazy(() => import('../components/TodoList'));
 const BlogPosts = lazy(() => import('../components/BlogPosts'));
 const TestDome = lazy(() => import('../components/TestDome'));
 const Login = lazy(() => import('../components/Login'));
+const Register = lazy(() => import('../components/Register'));
 
 const LayoutWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const location = useLocation();
@@ -32,6 +33,7 @@ const AppRoutes: React.FC = () => {
         <Suspense fallback={<div>Loading...</div>}>
             <Routes>
                 <Route path='/' element={<Login />} />
+                <Route path='/register' element={<Register />} />
                 {!isLogin && (
                     <Route
                         path='/*'

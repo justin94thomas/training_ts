@@ -21,11 +21,11 @@ const initialState: LoginState = {
 
 export const loginUser = createAsyncThunk<
     AuthResponse,
-    { username: string; password: string },
+    { email: string; password: string },
     { rejectValue: string }
 >('auth/login', async (formData, { rejectWithValue }) => {
     try {
-        const response = await axios.post('https://fakestoreapi.com/users', formData);
+        const response = await axios.post('http://localhost:5000/api/users/login', formData);
         return response.data;
     } catch (error: any) {
         return rejectWithValue(error.response?.data || 'Login failed');

@@ -8,13 +8,13 @@ import { loginUser } from './LoginSlice';
 import './styles.css';
 
 interface FormData {
-    username: string;
+    email: string;
     password: string;
 }
 
 const Login: React.FC = () => {
     const [formData, setFormData] = useState<FormData>({
-        username: '',
+        email: '',
         password: '',
     });
     const [showPassword, setShowPassword] = useState(false);
@@ -41,7 +41,8 @@ const Login: React.FC = () => {
         setShowPassword(!showPassword);
     };
 
-    return (
+   return (
+    <div className="login-wrapper">
         <div className="login-container">
             <div className="login-box">
                 <h2>Login</h2>
@@ -49,9 +50,9 @@ const Login: React.FC = () => {
                     <div className="input-group">
                         <input
                             type="text"
-                            placeholder="Username"
-                            name="username"
-                            value={formData.username}
+                            placeholder="Enter Email ID"
+                            name="email"
+                            value={formData.email}
                             onChange={handleChange}
                             required
                         />
@@ -80,7 +81,12 @@ const Login: React.FC = () => {
                 </form>
             </div>
         </div>
-    );
+        <p className="register-text">
+            Don't have an account? <a href="/register">Register Now</a>
+        </p>
+    </div>
+);
+
 };
 
 export default Login;
