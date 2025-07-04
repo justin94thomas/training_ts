@@ -7,7 +7,7 @@ const navigate = useNavigate();
     return (<>
         <div className='header-main'>
             <h4>React + Typescript and Node Training</h4>
-            <button onClick={() => navigate('/')}>Back to Dashboard</button>
+            <button onClick={() => navigate('/dashboard')}>Back to Dashboard</button>
         </div>
     </>)
 }

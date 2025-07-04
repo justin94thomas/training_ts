@@ -10,6 +10,7 @@ const BlogPosts = lazy(() => import('../components/BlogPosts'));
 const TestDome = lazy(() => import('../components/TestDome'));
 const Login = lazy(() => import('../components/Login'));
 const Register = lazy(() => import('../components/Register'));
+const ApacheCharts = lazy(() => import('../components/Apache_ECharts'));
 
 const LayoutWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const location = useLocation();
@@ -45,6 +46,7 @@ const AppRoutes: React.FC = () => {
                                     <Route path='todo' element={<ToDo />} />
                                     <Route path='blog' element={<BlogPosts />} />
                                     <Route path='testdome' element={<TestDome />} />
+                                    <Route path='apache-charts' element={<ApacheCharts />} />
                                 </Routes>
                             </LayoutWrapper>
                         }

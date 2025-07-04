@@ -17,7 +17,8 @@ const Dashboard: React.FC = () => {
     { id: 1, name: 'Shopping Cart', path: '/shopping', icon: 'Shopping' },
     { id: 2, name: 'Todo List', path: '/todo', icon: 'Todo' },
     { id: 3, name: 'Blog Post', path: '/blog', icon: 'Blog' },
-    { id: 4, name: 'TestDome', path: '/testdome', icon: 'Blog' },
+    { id: 4, name: 'TestDome', path: '/testdome', icon: 'TestDome' },
+    { id: 5, name: "Apache ECharts", path: '/apache-charts', icon: 'ECharts' }
   ];
 
   const getIcon = (iconName?: string, size: number = 24) => {
